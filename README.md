@@ -11,19 +11,19 @@ Exemplo de configuração do arquivo `.env.exemple`
 ## Instalação da API
 Para instalar as dependecias da api va no diretório `api-cliente-feliz` e execute o comando:
 
-        `npm install`
+        npm install
 
 ## Geração das Classes Prisma
 
 Após configurar o banco de dados, é necessário gerar as classes Prisma. Para fazer isso, execute o comando abaixo no diretório `api-cliente-feliz`:
 
-    `npx prisma generate`
+    npx prisma generate
 
 ## Execução da API
 
 Para executar a API do Cliente Feliz, execute o seguinte comando no diretório `api-cliente-feliz`:
 
-    `npm run dev`
+    npm run dev
 
 ## Execução do Front-end
 
