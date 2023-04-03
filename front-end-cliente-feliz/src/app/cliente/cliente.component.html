@@ -1,0 +1,51 @@
+<div class="container mt-4" >
+  <div class="card">
+    <button class="btn btn-primary" (click)="logout()">Sair</button>
+    <h1>Cadastro de cliente</h1>
+    <form>
+      <div class="row">
+          <div class="form-group col-sm-6 mb-3">
+            <label>Nome</label>
+            <input type="text" [(ngModel)]="nome" [ngModelOptions]="{standalone: true}"  class="form-control" id="nome" placeholder="Enter Name">
+          </div>
+
+          <div class="form-group col-sm-6 mb-3">
+            <label>Email</label>
+            <input type="text" class="form-control"  [(ngModel)]="email" [ngModelOptions]="{standalone: true}" id="email" placeholder="Enter Address">
+          </div>
+
+          <div class="form-group col-sm-6 mb-3">
+            <label>Documento</label>
+            <input type="text" class="form-control" [(ngModel)]="documento" [ngModelOptions]="{standalone: true}" id="documento" placeholder="Enter Phone">
+          </div>
+      </div>
+      <button type="submit" (click)="save()" class="btn btn-primary">Cadastrar</button>
+    </form>
+  </div>
+</div>
+
+<div class="container mt-4" >
+  <h1>Tabela de clientes</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Documento</th>
+      <th scope="col">Acoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let ClienteItem of ClienteArray">
+      <td>{{ClienteItem.nome  | uppercase}}</td>
+      <td>{{ClienteItem.email }}</td>
+      <td>{{ClienteItem.documento }}</td>
+      <td>
+        <button type="button" class="btn btn-success" (click)="setUpdate(ClienteItem)">Edit</button>
+        <button type="button" class="btn btn-danger" (click)="setDelete(ClienteItem)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
