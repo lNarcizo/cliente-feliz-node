@@ -10,8 +10,8 @@ export class SendEmailUseCase {
         this.transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: "lucaa646@gmail.com",
-                pass: "lucas2099",
+                user: "",
+                pass: "",
             }
         });
     }
